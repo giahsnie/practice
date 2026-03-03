@@ -133,7 +133,17 @@ let hasParent = true;
 let ticketPrice = 12;
 let userMoney = 15;
 
-let userOlder = userAge >= 17 || hasParent;
-let canBuyTicket = userMoney >= ticketPrice;
+let userOlder = userAge >= 17 || hasParent; // user is older than 17 or has a parent
+let canBuyTicket = userMoney >= ticketPrice; // user has enough money to buy the ticket
 
 console.log("Can this person buy a ticket? " + (userOlder && canBuyTicket)); // Output: Can this person buy a ticket? true
+
+let currentTemperature = 20; // Temperature in degrees Celsius
+let targetTemperature = 24; // Target temperature for the day
+let isPowerSavingMode = false; // Whether power-saving mode is off
+
+if (currentTemperature > targetTemperature)
+  console.log("It's too hot! Turn on the AC.");
+else if (currentTemperature < targetTemperature)
+  console.log("Temperature Perfect!.");
+else console.log("AC turned off!");
