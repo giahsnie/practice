@@ -9,8 +9,9 @@ else if (currentTemperature < targetTemperature)
   console.log("Temperature Perfect!.");
 else console.log("AC turned off!");
 
+//If else statement practice - ATM Machine
 let correctPin = "1234";
-let enteredPin = "0000";
+let enteredPin = "1234";
 let accountBalance = 5000;
 let withdrawalAmount = 1000;
 
@@ -27,4 +28,12 @@ if (enteredPin === correctPin) {
   }
 } else {
   console.log("Incorrect PIN. Please try again.");
+}
+
+let isSystemArmed = true;
+let doorOpen = true;
+let isCorrectKeyUsed = false;
+
+if (isSystemArmed && doorOpen && !isCorrectKeyUsed) {
+  console.log("Alarm triggered! Intruder alert!");
 }
