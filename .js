@@ -5,6 +5,7 @@ let z = 10;
 let result = y + y / z;
 console.log(result); // Statement- Output: 6.6
 
+//variables using let
 let fname = "John";
 let lname = "Doe";
 console.log(fname + " " + lname);
@@ -37,3 +38,63 @@ const person = {
 };
 console.log(person.name); // Output: Alice
 console.log(person.age); // Output: 30
+
+//variables using var
+var num1 = 10; // var is used to declare a variable named num1 and assign it the value 10
+var num2 = 20; // var is used to declare a variable named num2 and assign it the value 20
+var sum = num1 + num2; // var is used to declare a variable named sum and assign it the sum of num1 and num2
+console.log(sum); // Output: 30
+
+//variables using let, const, and var
+const dateofBirth = "1990-01-01"; // const is used to declare a constant variable named dateofBirth and assign it the value "1990-01-01"
+let currentYear = 2024; // let is used to declare a variable named currentYear and assign it the value 2024
+var message = "Hello, World!"; // var is used to declare a variable named message and assign it the value "Hello, World!"
+console.log(dateofBirth);
+
+// 1. Setup the variables
+const lattePrice = 5;
+const muffinPrice = 3;
+const discount = 2;
+const taxRate = 0.1;
+
+// 2. Calculate the subtotal (Latte + Muffin)
+let subtotal = lattePrice + muffinPrice;
+
+// 3. Subtract the discount
+let discountedTotal = subtotal - discount;
+
+// 4. Calculate the final bill including 10% tax
+// Hint: Final = discountedTotal + (discountedTotal * taxRate)
+let finalBill = discountedTotal + discountedTotal * taxRate;
+
+console.log("Your total is: $" + finalBill);
+
+let score = 500;
+let levelsWon = 3;
+let livesLost = 2;
+
+// The Math
+score = (score + levelsWon * 100 - livesLost * 50) * 2;
+
+console.log(score); // 1400
+
+let keyboard = 80;
+let mouse = 40;
+let totalDiscount = 30;
+let shipping = 10;
+
+let total = keyboard + mouse - totalDiscount;
+let finalTotal = total + shipping;
+
+console.log("Your final total is: $" + finalTotal);
+
+let distance = 300; //miles trip long
+let milesPerGallon = 30; //miles per gallon
+let PricePerGallon = 4; //dollars per gallon
+let headcount = 4; //number of people in the car
+
+let gallonsNeeded = distance / milesPerGallon; //gallons needed for the trip
+let totalCost = gallonsNeeded * PricePerGallon; //total cost of the trip
+let totalCostPerPerson = totalCost / headcount; //total cost per person
+
+console.log("Each person owes:$" + totalCostPerPerson);
