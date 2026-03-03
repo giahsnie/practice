@@ -1,5 +1,6 @@
 // this is a comment
-let x = 5; // let is used to declare a variable named x and assign it the value 5
+let x = 5;
+x; // let is used to declare a variable named x and assign it the value 5
 let y = 6;
 let z = 10;
 let result = y + y / z;
@@ -69,6 +70,7 @@ let finalBill = discountedTotal + discountedTotal * taxRate;
 
 console.log("Your total is: $" + finalBill);
 
+// 1. Setup the variables -- practice with let and const
 let score = 500;
 let levelsWon = 3;
 let livesLost = 2;
@@ -78,6 +80,7 @@ score = (score + levelsWon * 100 - livesLost * 50) * 2;
 
 console.log(score); // 1400
 
+// Keyboard - Variables (practice with let and const)
 let keyboard = 80;
 let mouse = 40;
 let totalDiscount = 30;
@@ -88,6 +91,7 @@ let finalTotal = total + shipping;
 
 console.log("Your final total is: $" + finalTotal);
 
+// Trip Cost Calculator - Variables (practice with let and const)
 let distance = 300; //miles trip long
 let milesPerGallon = 30; //miles per gallon
 let PricePerGallon = 4; //dollars per gallon
@@ -97,4 +101,39 @@ let gallonsNeeded = distance / milesPerGallon; //gallons needed for the trip
 let totalCost = gallonsNeeded * PricePerGallon; //total cost of the trip
 let totalCostPerPerson = totalCost / headcount; //total cost per person
 
-console.log("Each person owes:$" + totalCostPerPerson);
+console.log("Each person owes:$" + totalCostPerPerson); //Output: Each person owes:$10
+
+//Sample for Operations with Variables
+const morningSteps = 4000;
+const afternoonSteps = 2500;
+const goalSteps = 5000;
+const medalRequirement = 1000;
+
+let totalSteps = morningSteps + afternoonSteps;
+let StatusGoal = totalSteps - goalSteps;
+let medalStatus = Math.floor(totalSteps / medalRequirement);
+let leftToMedal = totalSteps % medalRequirement;
+
+console.log(totalSteps);
+console.log(StatusGoal);
+console.log(medalStatus);
+console.log(leftToMedal);
+
+// Sample for Comparison Operators
+let age = 15;
+
+// "Is age greater than or equal to 10 AND less than or equal to 20?"
+let isTeenager = age >= 10 && age <= 20;
+
+console.log(isTeenager); // true
+
+//Sample for Comparison and Logical Operators
+let userAge = 16;
+let hasParent = true;
+let ticketPrice = 12;
+let userMoney = 15;
+
+let userOlder = userAge >= 17 || hasParent;
+let canBuyTicket = userMoney >= ticketPrice;
+
+console.log("Can this person buy a ticket? " + (userOlder && canBuyTicket)); // Output: Can this person buy a ticket? true
