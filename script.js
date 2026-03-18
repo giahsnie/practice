@@ -155,3 +155,66 @@ while (countdown > 0) {
     countdown--;
   } while (countdown > 0);
 }
+
+let input = "42";
+let converted = Number(input); 
+
+console.log(converted + 8); // 50
+console.log(Number("42.5")); // 42.5
+console.log(Number("abc")); // NaN
+
+let num1 = 10;
+let num2 = 20;
+let sum = num1 + num2;
+console.log("The sum is: " + sum);
+
+let score = 85.5;
+let roundedScore = Math.round(score);
+console.log("Rounded Score: " + roundedScore);
+
+function calculateTotal(priceString, taxRate) {
+    // 1. Convert the string to a number (using parseFloat)
+    let price = parseFloat(priceString);
+    
+    // 2. Check if the conversion failed (in case the user typed letters)
+    if (isNaN(price)) {
+        return "Invalid Price";
+    }
+
+    // 3. Calculate the tax
+    let tax = price * taxRate;
+    let total = price + tax;
+
+    // 4. Use .toFixed(2) to force exactly 2 decimal places (cents)
+    // NOTE: .toFixed() returns a STRING, perfect for displaying in your UI.
+    return total.toFixed(2);
+}
+
+// Try it out:
+let itemPrice = "19.99"; // String from an input
+let tax = 0.12;         // 12% Tax
+
+console.log("Your total is: P" + calculateTotal(itemPrice, tax)); 
+// Output: "Your total is: P22.39"
+
+let num = 5.6 || 2; // Using bitwise OR to truncate decimal
+console.log(num); // Output: 5
+
+  const READ = 1; // 001 in binary
+  const WRITE = 2;
+  const EXECUTE = 4;
+
+  let permissions = READ | WRITE;
+  console.log(permissions); // Output: 3 (001 | 010 = 011)
+
+let hasWritePermission = (permissions & WRITE) !== 0;
+console.log(hasWritePermission); // Output: true
+
+let hasExecutePermission = (permissions & EXECUTE) !== 0;
+console.log(hasExecutePermission); // Output: false
+
+let bitwiseResult = 5 & 3; // 0101 & 0011
+console.log(bitwiseResult); // Output: 1 (0001 in binary)   
+let monthlysalary = 30e3; // 30,000 in scientific notation
+console.log("Age: " + age);
+console.log("Monthly Salary: " + monthlysalary);
